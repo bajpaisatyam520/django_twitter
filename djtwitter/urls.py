@@ -24,6 +24,7 @@ urlpatterns = [
     path('tweet/', include('tweet.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('', include ('tweet.urls')),
 ] 
 
 

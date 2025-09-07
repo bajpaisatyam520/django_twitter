@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="dashboard">
+  <h2>Welcome, {{ user.username }}!</h2>
+
+  <div class="sections">
+    <!-- Tweet Section -->
+    <div class="section">
+      <h3>Tweet Something</h3>
+      <a href="{% url 'tweet_list' %}">Go to Tweets</a>
+    </div>
+
+    <!-- Chat Section -->
+    <div class="section">
+      <h3>Chat with Friends</h3>
+      <a href="{% url 'chat_home' %}">Go to Chat</a>
+    </div>
+
+    <!-- Friends Section (future) -->
+    <div class="section">
+      <h3>Find Friends</h3>
+      <a href="#">Coming Soon</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
